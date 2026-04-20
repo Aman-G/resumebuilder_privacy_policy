@@ -30,7 +30,7 @@
         p {
             margin: 10px 0;
         }
-        ul {
+        ul, ol {
             padding-left: 20px;
         }
         li {
@@ -94,10 +94,10 @@
             It is not uploaded to any server.
         </p>
 
-        <h3>Subscription Data</h3>
+        <h3>Purchase Data</h3>
         <p>
-            When you purchase a subscription via Google Play, your subscription status (plan type,
-            expiry date, and Google Play purchase token) is stored in Firebase Firestore to manage
+            When you make a one-time purchase via Google Play, your purchase status (plan type,
+            access date, and Google Play purchase token) is stored in Firebase Firestore to manage
             your access to premium features. We do not store any card or banking details.
         </p>
 
@@ -116,7 +116,7 @@
             <li>To authenticate you and manage your account</li>
             <li>To generate and customise your resumes</li>
             <li>To sync your resume data across devices via Firebase Firestore</li>
-            <li>To manage your subscription and premium feature access</li>
+            <li>To manage your purchase and premium feature access</li>
             <li>To improve app performance and fix bugs</li>
         </ul>
     </div>
@@ -137,10 +137,11 @@
     <div class="section">
         <h2>5. Payments</h2>
         <p>
-            Premium templates are available via subscription through <strong>Google Play Billing</strong>.
-            Subscriptions auto-renew unless cancelled at least 24 hours before the renewal date.
+            Premium templates (IDs 4–10) are available via a <strong>one-time payment of ₹100</strong>
+            through <strong>Google Play Billing</strong>, which grants permanent lifetime access with
+            no recurring or subscription charges.
             We do not collect or store your card or banking details — all payment transactions are
-            handled securely by Google. Your subscription status is stored in Firebase Firestore
+            handled securely by Google. Your purchase status is stored in Firebase Firestore
             solely to grant you access to premium features.
             Refunds are subject to
             <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">Google Play's refund policy</a>.
@@ -161,7 +162,7 @@
         <p>We do not sell your personal data. Data is shared only with the following trusted third-party services
         that are necessary to operate the app:</p>
         <ul>
-            <li><strong>Google Firebase</strong> (Authentication, Firestore, Crashlytics, Analytics) — stores account info, resume data, and subscription status; processes crash and usage analytics</li>
+            <li><strong>Google Firebase</strong> (Authentication, Firestore, Crashlytics, Analytics) — stores account info, resume data, and purchase status; processes crash and usage analytics</li>
             <li><strong>Google Play Billing</strong> — handles all payment transactions</li>
             <li><strong>Groq, Inc.</strong> — processes resume content only when you use the optional AI summary feature</li>
         </ul>
@@ -170,9 +171,9 @@
     <div class="section">
         <h2>8. Data Retention</h2>
         <p>
-            Your name, email, resume data, and subscription status are retained in Firebase Firestore
-            for as long as your account is active. You may request deletion of your account and all
-            associated data at any time by contacting us (see Section 9).
+            Your name, email, resume data, and purchase status are retained in Firebase Firestore
+            for as long as your account is active. You may delete your account and all associated
+            data at any time (see Section 9).
         </p>
     </div>
 
@@ -180,7 +181,7 @@
         <h2>9. Data Deletion</h2>
         <p>
             You can delete your account and all associated data (name, email, resume content,
-            and subscription status stored in Firebase Firestore) directly from within the app:
+            and purchase status stored in Firebase Firestore) directly from within the app:
         </p>
         <ol>
             <li>Open the app and go to the <strong>Template Selection</strong> screen</li>
