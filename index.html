@@ -72,22 +72,33 @@
         <h2>2. Information We Collect</h2>
 
         <h3>Personal Information</h3>
+        <p>The following information is collected during sign-in via Firebase Authentication (Google Sign-In):</p>
         <ul>
             <li>Name</li>
             <li>Email address</li>
+            <li>Google account profile photo (used only within the app)</li>
         </ul>
-
-        <p>This information is collected during sign-in using Firebase Authentication.</p>
 
         <h3>Resume Data</h3>
         <p>
-            Resume content such as education, experience, and other details is stored locally on your device.
-            We do NOT store your full resume data on our servers.
+            Resume content you enter — including work experience, education, skills, projects, certifications,
+            and languages — is stored in <strong>Firebase Firestore</strong> (Google's cloud infrastructure)
+            and is also cached locally on your device for offline access.
+            This data is accessible only to you via your authenticated account.
         </p>
 
         <h3>Profile Photo</h3>
         <p>
-            If you upload a profile photo from your device gallery, it is used only within the app for resume generation.
+            If you upload a profile photo from your device gallery or camera, it is stored locally
+            on your device only and is used solely for resume generation within the app.
+            It is not uploaded to any server.
+        </p>
+
+        <h3>Subscription Data</h3>
+        <p>
+            When you purchase a subscription via Google Play, your subscription status (plan type,
+            expiry date, and Google Play purchase token) is stored in Firebase Firestore to manage
+            your access to premium features. We do not store any card or banking details.
         </p>
 
         <h3>Usage Data</h3>
@@ -96,84 +107,125 @@
             <li>Google Analytics for Firebase</li>
             <li>Firebase Crashlytics</li>
         </ul>
-        <p>This may include device information, app usage, and crash logs.</p>
+        <p>This may include device information, app activity, and crash logs.</p>
     </div>
 
     <div class="section">
         <h2>3. How We Use Your Information</h2>
         <ul>
-            <li>To generate and customize resumes</li>
-            <li>To save your profile (name and email)</li>
-            <li>To improve app performance</li>
-            <li>To fix bugs and crashes</li>
+            <li>To authenticate you and manage your account</li>
+            <li>To generate and customise your resumes</li>
+            <li>To sync your resume data across devices via Firebase Firestore</li>
+            <li>To manage your subscription and premium feature access</li>
+            <li>To improve app performance and fix bugs</li>
         </ul>
     </div>
 
     <div class="section">
-        <h2>4. Payments</h2>
+        <h2>4. AI-Powered Features</h2>
         <p>
-            We offer paid templates via one-time purchase using Google Play Billing.
-            We do not collect or store your payment details. All transactions are handled securely by Google.
+            ResumeBuilder includes an optional AI summary generator. When you use this feature,
+            relevant resume content (such as job title, skills, and work experience) is sent to
+            <strong>Groq, Inc.</strong> (<a href="https://groq.com" target="_blank">groq.com</a>)
+            to generate a professional summary. This data is processed by Groq in accordance with
+            their <a href="https://groq.com/privacy-policy/" target="_blank">Privacy Policy</a>.
+            Use of the AI feature is optional and no data is sent unless you explicitly tap
+            "Generate with AI".
         </p>
     </div>
 
     <div class="section">
-        <h2>5. Permissions</h2>
+        <h2>5. Payments</h2>
+        <p>
+            Premium templates are available via subscription through <strong>Google Play Billing</strong>.
+            Subscriptions auto-renew unless cancelled at least 24 hours before the renewal date.
+            We do not collect or store your card or banking details — all payment transactions are
+            handled securely by Google. Your subscription status is stored in Firebase Firestore
+            solely to grant you access to premium features.
+            Refunds are subject to
+            <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">Google Play's refund policy</a>.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>6. Permissions</h2>
         <ul>
-            <li><strong>Internet:</strong> Required for authentication and analytics</li>
-            <li><strong>Storage:</strong> Used to save resumes locally</li>
+            <li><strong>Internet:</strong> Required for authentication, cloud sync, AI features, and analytics</li>
+            <li><strong>Camera:</strong> Optional — used if you choose to take a profile photo within the app</li>
+            <li><strong>Storage / Media Images:</strong> Used to pick a profile photo from your gallery and to save exported PDF resumes</li>
         </ul>
     </div>
 
     <div class="section">
-        <h2>6. Data Sharing</h2>
+        <h2>7. Data Sharing</h2>
+        <p>We do not sell your personal data. Data is shared only with the following trusted third-party services
+        that are necessary to operate the app:</p>
+        <ul>
+            <li><strong>Google Firebase</strong> (Authentication, Firestore, Crashlytics, Analytics) — stores account info, resume data, and subscription status; processes crash and usage analytics</li>
+            <li><strong>Google Play Billing</strong> — handles all payment transactions</li>
+            <li><strong>Groq, Inc.</strong> — processes resume content only when you use the optional AI summary feature</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>8. Data Retention</h2>
         <p>
-            We do not sell or share your personal data with third parties.
-            However, we use third-party services such as Google Analytics and Firebase Crashlytics,
-            which may process anonymized data.
+            Your name, email, resume data, and subscription status are retained in Firebase Firestore
+            for as long as your account is active. You may request deletion of your account and all
+            associated data at any time by contacting us (see Section 9).
         </p>
     </div>
 
     <div class="section">
-        <h2>7. Data Retention</h2>
+        <h2>9. Data Deletion</h2>
         <p>
-            Your name and email may be stored securely. Resume data remains on your device unless deleted by you.
+            You can delete your account and all associated data (name, email, resume content,
+            and subscription status stored in Firebase Firestore) directly from within the app:
         </p>
-    </div>
-
-    <div class="section">
-        <h2>8. Data Deletion</h2>
+        <ol>
+            <li>Open the app and go to the <strong>Template Selection</strong> screen</li>
+            <li>Tap the <strong>⋮ menu</strong> (top-right corner)</li>
+            <li>Select <strong>"Delete Account"</strong></li>
+            <li>Confirm in the dialog — your account and all data will be permanently deleted immediately</li>
+        </ol>
         <p>
-            You can request deletion of your data by contacting us at:
+            If you have uninstalled the app or are unable to access it, you can also request deletion
+            by contacting us at:
         </p>
         <div class="contact">
             📧 aman.grover42@gmail.com
         </div>
+        <p>Email requests will be processed within 30 days.</p>
     </div>
 
     <div class="section">
-        <h2>9. Security</h2>
+        <h2>10. Security</h2>
         <p>
-            We take reasonable measures to protect your data. However, no method of transmission over the internet is 100% secure.
+            We take reasonable measures to protect your data, including Firebase security rules that
+            restrict access to your data to your authenticated account only.
+            However, no method of transmission over the internet is 100% secure.
         </p>
     </div>
 
     <div class="section">
-        <h2>10. Children's Privacy</h2>
+        <h2>11. Children's Privacy</h2>
         <p>
             This app is not intended for children under 13 years of age.
+            We do not knowingly collect personal information from children under 13.
         </p>
     </div>
 
     <div class="section">
-        <h2>11. Changes to This Policy</h2>
+        <h2>12. Changes to This Policy</h2>
         <p>
-            We may update this Privacy Policy from time to time. Changes will be reflected with an updated effective date.
+            We may update this Privacy Policy from time to time. Changes will be reflected with an
+            updated effective date on this page. Continued use of the app after changes constitutes
+            your acceptance of the updated policy.
         </p>
     </div>
 
     <div class="section">
-        <h2>12. Contact Us</h2>
+        <h2>13. Contact Us</h2>
         <div class="contact">
             <p><strong>Aman Grover</strong></p>
             <p>Email: aman.grover42@gmail.com</p>
